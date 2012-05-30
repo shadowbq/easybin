@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'easy-bin'
+
+username = ARGV[0]
+password = ARGV[1]
+
+session = Easy::Bin::Focus.new
+session.login(username, password)
+
+puts session.search("example.com")
