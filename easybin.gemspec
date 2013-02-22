@@ -1,7 +1,10 @@
-# -*- encoding: utf-8 -*-
-require File.expand_path('../lib/easybin/version', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+name = "easybin"
+require "#{name}/version"
+
 
 Gem::Specification.new do |gem|
+  gem.platform      = Gem::Platform::RUBY
   gem.authors       = ["shadowbq"]
   gem.email         = ["shadowbq@gmail.com"]
   gem.description   = %q{bundle create easybin}
@@ -14,7 +17,8 @@ Gem::Specification.new do |gem|
   gem.name          = "easybin"
   gem.require_paths = ["lib"]
   gem.version       = Easy::Bin::VERSION
-
+  gem.license       = 'MIT'
+  
   gem.add_dependency('example', '~> 1.0')
   gem.add_development_dependency('bump')
   

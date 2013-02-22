@@ -1,11 +1,13 @@
 #!/usr/bin/env ruby
-require 'rubygems'
-require 'easy-bin'
+begin
+  require 'rubygems'
+  require 'bundler'
+  Bundler.setup(:default)
+rescue ::Exception => e
+end
 
-username = ARGV[0]
-password = ARGV[1]
+# Executable with absolute path to lib for hacking and development
+require File.join(File.dirname(__FILE__), '..', 'lib', 'easybin', 'cli')
 
-session = Easy::Bin::Focus.new
-session.login(username, password)
+Easy::BIN::CLI.invoke
 
-puts session.search("example.com")
