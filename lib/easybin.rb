@@ -10,7 +10,9 @@ module Easy
     
     XX="myconstant"
     
+    require "easybin/main"
     require "easybin/version"
     require "easybin/gonna"
+    
   end 
 end
