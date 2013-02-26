@@ -2,6 +2,29 @@
 
 EasyBin is a template gem that can be used for reference or export to get up and running fast in gem development.
 
+## Generic Gem Layout
+
+This uses the standard Generic gem layout structure
+
+```
+easybin
+├── lib
+│   ├── easybin
+│   │   └── version.rb
+│   └── easybin.rb
+└── easybin.gemspec
+```
+
+## Tests
+
+Colorful Minitest with Turn using the Outline style are already setup.
+
+## Purpose
+
+Creating a binary can be a pain in a$$. 
+
+I wanted a quick way to create `mechanize` bins that scrape pages for data I need. Hence the Easybin!
+
 ## PrepWork
 
 How to export EasyBin to Newgem
@@ -28,19 +51,6 @@ Equalivent Bash Command
 ```shell
 mv ./easybin.gemspec ./newgem.gemspec
 mv ./lib/easybin.rb ./lib/newgem.rb 
-```
-
-## Generic Gem Layout
-
-This uses the standard Generic gem layout structure
-
-```
-easybin
-├── lib
-│   ├── easybin
-│   │   └── version.rb
-│   └── easybin.rb
-└── easybin.gemspec
 ```
 
 ### Search & Replace
@@ -73,6 +83,4 @@ Or install it yourself as:
 
     $ gem install newgem
 
-## Tests
 
-Colorful Minitest with Turn using the Outline style are already setup.
