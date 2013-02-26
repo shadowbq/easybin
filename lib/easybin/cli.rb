@@ -1,4 +1,3 @@
-
 require 'optparse'
 require 'easybin'
 
@@ -17,18 +16,18 @@ module Easy
       options[:example] = true
       options[:foobar] = true
       
-      options[:raw] = Pastenum::Defaults::Raw
+      options[:raw] = Easy::Bin::Defaults::Raw
       
       opt_parser = OptionParser.new do |opt|
-        opt.banner = "Usage: pastenum [OPTIONS] \"search string\""
+        opt.banner = "Usage: gonna [OPTIONS] \"search string\""
         opt.separator ""
         
-        opt.on("-e","--[no-]example","Example do it","  Default: #{options[:pastebin]}") do |value|
-          options[:pastebin] = value
+        opt.on("-e","--[no-]example","Example do it","  Default: #{options[:example]}") do |value|
+          options[:example] = value
         end
       
         opt.on("-x", "--xxx", "XXXXX") do 
-          options[:tos] = true
+          options[:x] = true
         end
         
         opt.separator "Options::"
