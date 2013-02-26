@@ -30,6 +30,19 @@ mv ./easybin.gemspec ./newgem.gemspec
 mv ./lib/easybin.rb ./lib/newgem.rb 
 ```
 
+## Generic Gem Layout
+
+This uses the standard Generic gem layout structure
+
+```
+easybin
+├── lib
+│   ├── easybin
+│   │   └── version.rb
+│   └── easybin.rb
+└── easybin.gemspec
+```
+
 ### Search & Replace
 
 Search and Replace all modulenames, requires, errors, constants, etc.
