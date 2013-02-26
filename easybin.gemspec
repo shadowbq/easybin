@@ -21,5 +21,7 @@ Gem::Specification.new do |gem|
   
   gem.add_dependency('example', '~> 1.0')
   gem.add_development_dependency('bump')
-  
+  gem.add_development_dependency('minitest-colorize')
+  gem.add_development_dependency('turn')
+  gem.add_development_dependency('ansi')
 end
