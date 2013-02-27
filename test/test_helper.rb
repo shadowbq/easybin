@@ -1,6 +1,13 @@
 require 'rubygems'
 require 'bundler/setup'
 
+require 'simplecov'
+SimpleCov.start do
+  add_filter "/test/"
+  add_group "Bin", "bin"
+end
+
+
 require 'minitest/autorun'
 require 'minitest/colorize'
 require 'minitest/spec'
