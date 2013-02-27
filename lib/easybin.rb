@@ -2,7 +2,7 @@
 require 'rubygems'
 
 # Rubygems
-require 'example'
+require 'blankblank'
 
 module Easy
   module Bin

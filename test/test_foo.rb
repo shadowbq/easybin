@@ -1,5 +1,7 @@
 require 'minitest/spec'
- 
+
+
+
 describe String do
   before do
     @meme = String.new

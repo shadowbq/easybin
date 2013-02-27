@@ -4,7 +4,8 @@ require 'bundler/setup'
 require 'simplecov'
 SimpleCov.start do
   add_filter "/test/"
-  add_group "Bin", "bin"
+  add_group "Bin", "/lib/cli"
+  add_group "Lib", "/lib"
 end
 
 
@@ -13,6 +14,9 @@ require 'minitest/colorize'
 require 'minitest/spec'
 
 require 'turn/autorun'
+
+require File.join(File.dirname(__FILE__), '..', 'lib', 'easybin', 'cli')
+require File.join(File.dirname(__FILE__), '..', 'lib', 'easybin')
 
 =begin
 Turn Configurations

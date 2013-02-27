@@ -2,28 +2,57 @@
 
 EasyBin is a template gem that can be used for reference or export to get up and running fast in gem development.
 
+## Purpose
+
+Creating a binary can be a pain in a$$. So can setting up tests, and remembering what rubyist like and dislike.
+
+I wanted a quick way to create `mechanize` bins that scrape html pages for data I need. Hence the Easybin!
+
 ## Generic Gem Layout
 
 This uses the standard Generic gem layout structure
 
 ```
 easybin
+├── bin
+│   └── gonna
 ├── lib
 │   ├── easybin
 │   │   └── version.rb
 │   └── easybin.rb
-└── easybin.gemspec
+├── test
+│   ├── test_helper.rb
+│   └── test_foo.rb
+├── easybin.gemspec
+└── etc...
 ```
 
 ## Tests
 
 Colorful Minitest with Turn using the Outline style are already setup.
 
-## Purpose
+```
+==============================================================================
+SUITE test (SEED 59041)
+==============================================================================
+String::when asked about bar possibilities in front submatch
+     0001 it will not match                                    0:00:00.000 PASS
+String::when looking for foo
+     0001 should respond positively                            0:00:00.000 PASS
+==============================================================================
+  pass: 2,  fail: 0,  error: 0, skip: 0
+  total: 2 tests with 3 assertions in 0.001035 seconds
+==============================================================================
+Coverage report generated for Unit Tests to /Users/macgregors/sandbox/easybin/coverage. 31 / 90 LOC (34.44%) covered.
+````
 
-Creating a binary can be a pain in a$$. 
+### Coverage
 
-I wanted a quick way to create `mechanize` bins that scrape pages for data I need. Hence the Easybin!
+SimpleCov is included to provide test code coverage reporting.
+
+![SimpleCov coverage report](http://colszowka.github.com/simplecov/devise_result-0.5.3.png)
+
+
 
 ## PrepWork
 
@@ -69,11 +98,17 @@ with
 
 Fix new owner and suchforth...
 
-## Usage of Newgem for Installation in a application
+## Usage
+
+### Command Line
+
+	$ gonna --help
+
+###  Newgem for Installation in a application
 
 Add this line to your application's Gemfile:
 
-    gem 'newgem'
+    $ gem 'newgem' "~> 0.0"
 
 And then execute:
 

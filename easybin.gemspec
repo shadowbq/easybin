@@ -22,7 +22,7 @@ Gem::Specification.new do |gem|
   #Gonna is a mechanize example bin that fetches are parses a fake page.
   gem.add_dependency('mechanize')
   
-  gem.add_dependency('example', '~> 1.0')
+  gem.add_dependency('blankblank', '~> 0.0')
   gem.add_development_dependency('bump')
   gem.add_development_dependency('minitest-colorize')
   gem.add_development_dependency('turn')
